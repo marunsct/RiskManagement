@@ -1,0 +1,50 @@
+{
+    "xsappname": "risk-management-dev",
+    "tenant-mode": "dedicated",
+    "description": "Security profile of called application",
+    "scopes": [
+        {
+            "name": "$XSAPPNAME.RiskViewver",
+            "description": "RiskViewver"
+        },
+        {
+            "name": "$XSAPPNAME.RiskManager",
+            "description": "RiskManager"
+        }
+    ],
+    "attributes": [],
+    "role-templates": [
+        {
+            "name": "RiskViewver",
+            "description": "generated",
+            "scope-references": [
+                "$XSAPPNAME.RiskViewver"
+            ],
+            "attribute-references": []
+        },
+        {
+            "name": "RiskManager",
+            "description": "generated",
+            "scope-references": [
+                "$XSAPPNAME.RiskManager"
+            ],
+            "attribute-references": []
+        }
+    ],
+    "role-collections": [
+        {
+            "name": "RiskViewver",
+            "description": "View Risks",
+            "role-template-references": [
+                "$XSAPPNAME.RiskViewver"
+            ]
+        },
+        {
+            "name": "RiskManager",
+            "description": "Manage Risks",
+            "role-template-references": [
+                "$XSAPPNAME.RiskManager"
+            ]
+        }
+    ]
+}
